@@ -29,8 +29,6 @@ set -e
 
 APP_VERSION="$($HOME/proof-bin/dev-tools/travis/grep_proof_app_version.sh .)";
 
-$HOME/proof-bin/dev-tools/travis/pack_app_deb_helper.sh
-
 DEB_FILENAME=`find -maxdepth 1 -name "$TARGET_NAME-*.deb" -exec basename "{}" \; -quit`
 if [ -z "$DEB_FILENAME" ]; then
     echo -e "\033[1;31mCan't find created deb package, halting\033[0m";
